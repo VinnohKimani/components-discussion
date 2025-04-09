@@ -2,11 +2,11 @@
 import { Avatar } from "./Avatar";
 import { Info } from "./Info";
 
-export function Profile() {
+export function Profile({ name, title, location, avatar }) {
   return (
     <div className="bg-white rounded-lg shadow p-6 flex gap-4 items-center">
-      <Avatar></Avatar>
-      <Info name="Kasongo" title="Thief" location="Nairobi" />
+      <Avatar src={avatar} alt={name} />
+      <Info name={name} title={title} location={location} />
     </div>
   );
 }
